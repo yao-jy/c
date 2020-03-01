@@ -27,14 +27,14 @@ int pass(int grade[]){
     }
     return pass_people;
 }
-int change_points(int grade[]){
+/*int change_points(int grade[]){
     for(int a=0;a<AMOUNT;a++){
         double b=sqrt( (double) grade[a] );
         b=b*10.0+10.0;
         grade[a]=(int) b;
     }
 }
-
+*/
 
 void test1() {
     int grade[AMOUNT]={60,1,1,1,1,1,1,1,1,1};
@@ -59,7 +59,7 @@ int main(){
             b+=1;
         }
     }
-    change_points(grade);
+/*    change_points(grade);
     if(DEBUG>0){
         printf("change_points:");
         while(c<AMOUNT){
@@ -67,15 +67,15 @@ int main(){
             c+=1;
         }
         printf("\n");
-    }
+    }*/
     float aver=sum(grade);
     int pass_people=pass(grade);
-    printf("change_points:");
+   /* printf("change_points:");
     while(d<AMOUNT){
         printf("%d ",grade[d]);
         d+=1;
     }
-    printf("\n");
+    printf("\n");*/
     printf("average:%.2f\n",aver);
     printf("pass_people_amount:%d\n",pass_people);
 }
